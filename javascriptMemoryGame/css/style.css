@@ -1,0 +1,103 @@
+body { 
+        height: 100vh;
+        background-color: #cccccc;
+       
+      }
+
+
+.grid-container {
+        width: 640px;
+        height: 580px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "tl tm1 tm2 tr" "ml mm1 mm2 mr" "bl bm1 bm2 br";
+        perspective: 1000px;
+}
+
+.tl {
+        grid-area: tl;
+}
+
+.tm1 {
+        grid-area: tm1;
+}
+
+.tm2 {
+        grid-area: tm2;
+}
+
+.tr {
+        grid-area: tr;
+}
+
+.ml {
+        grid-area: ml;
+}
+
+.mm1 {
+        grid-area: mm1;
+}
+
+.mm2 {
+        grid-area: mm2;
+}
+
+.mr {
+        grid-area: mr;
+}
+
+.bl {
+        grid-area: bl;
+}
+
+.bm1 {
+        grid-area: bm1;
+}
+
+.bm2 {
+        grid-area: bm2;
+}
+
+.br {
+        grid-area: br;
+}
+
+.cardsClass {
+        margin: 25px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+        display: flex;
+}
+
+.cardsClass:active {
+        transform: scale(.95);
+        transition: transform.2s;
+}
+
+.cardsClass.flip {
+        transform: rotateY(180deg);
+}
+
+.frontFace, .backFace {
+        position: absolute;
+        border-radius: 10px;
+        backface-visibility: hidden;
+}
+
+.frontFace {
+        transform: rotateY(180deg);
+}
+
+img {
+        width: 100px;
+}
+
+.footer{
+        color: black;
+        text-align: center;
+       
+}
+
